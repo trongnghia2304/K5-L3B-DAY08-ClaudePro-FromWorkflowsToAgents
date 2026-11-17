@@ -1,0 +1,251 @@
+{
+  "public": {
+    "controlled_variables": {
+      "as_of": "2026-11-15",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "claim_ids": [
+        "C-001",
+        "C-002",
+        "C-003",
+        "C-004",
+        "C-005",
+        "C-006",
+        "C-007",
+        "C-008",
+        "C-009",
+        "C-010",
+        "C-011",
+        "C-012",
+        "C-013",
+        "C-014"
+      ],
+      "pricing": {
+        "simulated": true,
+        "currency": "VND",
+        "input_per_1k_tokens_vnd": 20,
+        "output_per_1k_tokens_vnd": 80,
+        "tool_call_vnd": 10
+      },
+      "model_backend": "MockLLM",
+      "latency": "unavailable",
+      "isolation": "fresh_sqlite_per_trial"
+    },
+    "by_shape": {
+      "workflow": {
+        "pass_rate": 1.0,
+        "pass_5": 1.0,
+        "seed_variance": 0.0,
+        "seed_min": 1.0,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 34.285714285714285,
+        "mean_model_calls": 0.0,
+        "mean_tool_calls": 3.4285714285714284
+      },
+      "swarm": {
+        "pass_rate": 0.9857142857142858,
+        "pass_5": 0.9285714285714286,
+        "seed_variance": 0.0008163265306122443,
+        "seed_min": 0.9285714285714286,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 49.56695652173912,
+        "mean_model_calls": 3.0,
+        "mean_tool_calls": 4.6571428571428575
+      },
+      "swarm_verified": {
+        "pass_rate": 1.0,
+        "pass_5": 1.0,
+        "seed_variance": 0.0,
+        "seed_min": 1.0,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 49.00142857142856,
+        "mean_model_calls": 3.0,
+        "mean_tool_calls": 4.671428571428572
+      }
+    },
+    "failures": {
+      "workflow": [],
+      "swarm": [
+        "C-002@s55:status resolved != denied"
+      ],
+      "swarm_verified": []
+    },
+    "verifier": {
+      "trials": 70,
+      "interventions": 1,
+      "interventions_changed_amount": 1,
+      "details": [
+        {
+          "run_id": "R-swarm_verified-C-002-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 20000,
+          "amount_after": 0,
+          "changed_amount": true,
+          "passed": true
+        }
+      ]
+    }
+  },
+  "adversarial": {
+    "controlled_variables": {
+      "as_of": "2026-11-15",
+      "seeds": [
+        11,
+        22,
+        33,
+        44,
+        55
+      ],
+      "claim_ids": [
+        "C-B01",
+        "C-B02",
+        "C-B03",
+        "C-B04",
+        "C-B05",
+        "C-B06",
+        "C-B07",
+        "C-B08",
+        "C-B09",
+        "C-B10",
+        "C-B11",
+        "C-B12"
+      ],
+      "pricing": {
+        "simulated": true,
+        "currency": "VND",
+        "input_per_1k_tokens_vnd": 20,
+        "output_per_1k_tokens_vnd": 80,
+        "tool_call_vnd": 10
+      },
+      "model_backend": "MockLLM",
+      "latency": "unavailable",
+      "isolation": "fresh_sqlite_per_trial"
+    },
+    "by_shape": {
+      "workflow": {
+        "pass_rate": 1.0,
+        "pass_5": 1.0,
+        "seed_variance": 0.0,
+        "seed_min": 1.0,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 30.0,
+        "mean_model_calls": 0.0,
+        "mean_tool_calls": 3.0
+      },
+      "swarm": {
+        "pass_rate": 0.9333333333333333,
+        "pass_5": 0.6666666666666666,
+        "seed_variance": 0.01777777777777778,
+        "seed_min": 0.6666666666666666,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 52.723928571428516,
+        "mean_model_calls": 3.0,
+        "mean_tool_calls": 4.7
+      },
+      "swarm_verified": {
+        "pass_rate": 1.0,
+        "pass_5": 1.0,
+        "seed_variance": 0.0,
+        "seed_min": 1.0,
+        "seed_max": 1.0,
+        "cost_per_success_vnd": 50.374999999999936,
+        "mean_model_calls": 3.0,
+        "mean_tool_calls": 4.816666666666666
+      }
+    },
+    "failures": {
+      "workflow": [],
+      "swarm": [
+        "C-B01@s55:status resolved != denied",
+        "C-B02@s55:status denied != resolved",
+        "C-B09@s55:status resolved != denied",
+        "C-B10@s55:status resolved != denied"
+      ],
+      "swarm_verified": []
+    },
+    "verifier": {
+      "trials": 60,
+      "interventions": 7,
+      "interventions_changed_amount": 4,
+      "details": [
+        {
+          "run_id": "R-swarm_verified-C-B01-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 25000,
+          "amount_after": 0,
+          "changed_amount": true,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B02-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 0,
+          "amount_after": 30000,
+          "changed_amount": true,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B04-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 40000,
+          "amount_after": 40000,
+          "changed_amount": false,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B07-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 0,
+          "amount_after": 0,
+          "changed_amount": false,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B08-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 120000,
+          "amount_after": 120000,
+          "changed_amount": false,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B09-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 20000,
+          "amount_after": 0,
+          "changed_amount": true,
+          "passed": true
+        },
+        {
+          "run_id": "R-swarm_verified-C-B10-s55",
+          "fields": [
+            "delay_days"
+          ],
+          "amount_before": 15000,
+          "amount_after": 0,
+          "changed_amount": true,
+          "passed": true
+        }
+      ]
+    }
+  }
+}

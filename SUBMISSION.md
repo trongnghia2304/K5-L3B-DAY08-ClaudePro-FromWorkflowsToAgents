@@ -2,8 +2,6 @@
 
 ## Loại bài
 
-**Nhóm.** Nhóm push bài lên GitHub; mỗi thành viên tự nộp cùng link repo nhóm trên LMS bằng tài khoản cá nhân. Ai không nộp link thì không có điểm, dù nhóm đã nộp.
-
 ## Tên repo và biến tên
 
 - `Kn`: số khóa. Khóa này dùng `K5`.
@@ -12,7 +10,7 @@
 ### Repo bài nộp nhóm
 
 ```text
-K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents
+K5-L3B-DAY08-ClaudePro-FromWorkflowsToAgents
 ```
 
 `TenNhom` viết không dấu, không khoảng trắng. Repo phải public, hoặc đã mời giảng viên vào.
